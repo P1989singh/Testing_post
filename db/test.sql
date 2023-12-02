@@ -4,7 +4,8 @@
 
 -- DROP TABLE prod.student;
 
-CREATE TABLE prod.student (
-	id int4 NULL,
+CREATE TABLE prod.student 
+(
+	id int4,
 	"name" _varchar NULL
 );

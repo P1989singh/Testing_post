@@ -10,9 +10,7 @@ jobs:
         - name: Checkout Repository
           uses: actions/Checkout@v2
         - name: Set up PostgreSQL
-          run: sudo apt-get install -y postgresql
-        - name: Check PostgreSQL version
-          run: postgres --version  
+          run: sudo apt-get install -y postgresql 
           
         - name: Deploy Database Query
           run: | 

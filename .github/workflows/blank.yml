@@ -15,5 +15,5 @@ jobs:
           run: chmod +x ./db/test.sql   
         - name: Deploy Database Query
           run: | 
-             SQL_FILE= "./db/test.sql"
+             SQL_FILE= "./.github/workflows/db/test.sql"
              psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE

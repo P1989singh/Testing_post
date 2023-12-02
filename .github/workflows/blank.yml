@@ -15,4 +15,4 @@ jobs:
  #         run: chmod +x ./.github/workflows/db/test.sql   
         - name: Deploy Database Query
           run: | 
-             psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE
+            psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -c " select * from demo;"

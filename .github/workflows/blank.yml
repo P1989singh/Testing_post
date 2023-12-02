@@ -16,5 +16,5 @@ jobs:
             DB_USER= "postgres"
             DB_PASSWORD= "root"
             mydatabase= "prod"
-            SQL_FILE= "db/test.sql"
+            SQL_FILE= "./db/test.sql"
             psql -h $localhost -U $DB_USER -d $mydatabase -W $DB_PASSWORD -f $SQL_FILE

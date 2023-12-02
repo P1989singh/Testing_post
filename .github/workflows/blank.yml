@@ -14,5 +14,5 @@ jobs:
  #       - name: Grant execute permission to SQL script
  #         run: chmod +x ./.github/workflows/db/test.sql   
         - name: Deploy Database Query
-        run: | 
-           psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE
+          run: | 
+             psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE

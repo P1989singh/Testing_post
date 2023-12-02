@@ -11,9 +11,9 @@ jobs:
           uses: actions/Checkout@v2
         - name: Set up PostgreSQL
           run: sudo apt-get install -y postgresql 
- #       - name: Grant execute permission to SQL script
-#          run: chmod +x ./db/test.sql   
+        - name: Grant execute permission to SQL script
+          run: chmod +x ./db/test.sql   
         - name: Deploy Database Query
           run: | 
-             sudo service postgresql start
-             psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f ./db/test.sql
+             SQL_FILE= "./db/test.sql"
+             psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE

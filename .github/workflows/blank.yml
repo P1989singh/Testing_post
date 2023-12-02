@@ -1,0 +1,20 @@
+name: Release Testing
+run-name: Setting up the database Testing
+on:
+   push:
+        branches:
+            -main
+jobs:
+   deploy:
+     run-on: ubuntu-latest
+     steps:
+        - name: Checkout Repository
+          uses: actions/Checkout@v2
+          
+        - name: Deploy Database Query
+          run: | 
+            localhost= jdbc:postgresql://localhost:5432/
+            DB_USER= postgres
+            DB_PASSWORD= root
+            mydatabase= prod
+            psql -h $localhost -U $DB_USER -d $mydatabase -W $DB_PASSWORD -f db/test.sql

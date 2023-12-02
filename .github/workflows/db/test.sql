@@ -1,1 +1,1 @@
-select * from demo;
+select * from prod.demo;

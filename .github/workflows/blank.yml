@@ -14,6 +14,5 @@ jobs:
           
         - name: Deploy Database Query
           run: | 
-             mydatabase= "prod"
              SQL_FILE= "./db/test.sql"
              psql -h $localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f $SQL_FILE

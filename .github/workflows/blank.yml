@@ -14,8 +14,8 @@ jobs:
           
         - name: Deploy Database Query
           run: | 
-            DB_USER= "postgres"
-            DB_PASSWORD= "root"
-            mydatabase= "prod"
-            SQL_FILE= "./db/test.sql"
-            psql -h $localhost -p 5432 -U $DB_USER -d $mydatabase -W $DB_PASSWORD -f $SQL_FILE
+             DB_USER= "postgres"
+             DB_PASSWORD= "root"
+             mydatabase= "prod"
+             SQL_FILE= "./db/test.sql"
+             psql -h $localhost -p 5432 -U $DB_USER -d $mydatabase -W $DB_PASSWORD -f $SQL_FILE

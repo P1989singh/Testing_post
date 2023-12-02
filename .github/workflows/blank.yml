@@ -15,4 +15,4 @@ jobs:
           run: chmod +x ./db/test.sql   
         - name: Deploy Database Query
           run: | 
-             psql -h $localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f ./db/test.sql
+             psql -h localhost -p 5432 -U ${{secrets.DB_USERNAME}} -d ${{secrets.MYDATABASE}} -W ${{secrets.DB_PASSWORD}} -f ./db/test.sql
